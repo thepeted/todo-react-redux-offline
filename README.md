@@ -2,7 +2,7 @@
 
 ## Redux Dev Tools
 
-The project supports [Chrome Redux Dev Tools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
+The project supports the [Redux Dev Tools extension](https://github.com/zalmoxisus/redux-devtools-extension)
 
 ## Run locally
 
