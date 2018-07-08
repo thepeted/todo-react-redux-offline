@@ -25,16 +25,27 @@ const todos = (state = initialState, action) => {
         isFetchingTodos: false
       }
     case "UPDATE_TODO_REQUEST":
-      const index = state.items.findIndex(
+      const updateIdx = state.items.findIndex(
         item => item.todoId === action.payload.todoId
       )
-      if (index < 0) return state
+      if (updateIdx < 0) return state
       return {
         ...state,
         items: state.items
-          .slice(0, index)
-          .concat({ ...state.items[index], ...action.payload })
-          .concat(state.items.slice(index + 1))
+          .slice(0, updateIdx)
+          .concat({ ...state.items[updateIdx], ...action.payload })
+          .concat(state.items.slice(updateIdx + 1))
+      }
+    case "DELETE_TODO_REQUEST":
+      const deleteIdx = state.items.findIndex(
+        item => item.todoId === action.payload
+      )
+      if (deleteIdx < 0) return state
+      return {
+        ...state,
+        items: state.items
+          .slice(0, deleteIdx)
+          .concat(state.items.slice(deleteIdx + 1))
       }
     case "POST_TODO_REQUEST":
       return {

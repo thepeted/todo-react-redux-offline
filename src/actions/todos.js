@@ -62,3 +62,16 @@ export const addTodo = text => {
     }
   }
 }
+
+export const deleteTodo = todoId => ({
+  type: "DELETE_TODO_REQUEST",
+  payload: todoId,
+  meta: {
+    offline: {
+      effect: {
+        url: `${API_BASE}/todos/${todoId}`,
+        method: "DELETE"
+      }
+    }
+  }
+})
