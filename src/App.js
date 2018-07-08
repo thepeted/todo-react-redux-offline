@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
 import * as actions from "./actions/todos"
+import TodoList from "./containers/TodoListContainer"
 
 class App extends Component {
   state = {
@@ -38,6 +39,8 @@ class App extends Component {
           <input type="submit" value="submit" />
         </form>
         <h1>Todos</h1>
+        <TodoList />
+        <br />
         {this.props.todos.items.map(todo => JSON.stringify(todo))}
       </div>
     )
