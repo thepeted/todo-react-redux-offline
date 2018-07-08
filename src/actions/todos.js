@@ -30,7 +30,8 @@ export const getTodos = () => dispatch => {
 
 export const addTodo = text => {
   const todoId = uuid()
-  const createdDate = new Date().getTime()
+  const now = new Date()
+  const createdDate = now.getTime() + now.getTimezoneOffset() * 60000 // UTC timestamp
   return {
     type: "POST_TODO_REQUEST",
     payload: { text, todoId, createdDate, completed: false },
