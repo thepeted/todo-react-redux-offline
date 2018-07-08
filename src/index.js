@@ -7,6 +7,7 @@ import offlineConfig from "@redux-offline/redux-offline/lib/defaults"
 import thunk from "redux-thunk"
 import reducer from "./reducers"
 
+import "./normalize.css"
 import "./index.css"
 import App from "./App"
 
