@@ -1,0 +1,19 @@
+.TodoCard {
+  display: flex;
+  width: 100%;
+  padding: 15px;
+
+  background: #fff;
+}
+
+.TodoCard__check-area {
+  width: 80px;
+}
+
+.TodoCard__content-area {
+  flex-grow: 1;
+}
+
+.TodoCard__close-area {
+  width: 40px;
+}
