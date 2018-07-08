@@ -15,6 +15,21 @@ const errorFetchingTodos = () => ({
   type: "TODOS_FETCH_ERROR"
 })
 
+export const filterByAll = () => ({
+  type: "SET_TODO_FILTER",
+  payload: "ALL"
+})
+
+export const filterByCompleted = () => ({
+  type: "SET_TODO_FILTER",
+  payload: "COMPLETED"
+})
+
+export const filterByActive = () => ({
+  type: "SET_TODO_FILTER",
+  payload: "ACTIVE"
+})
+
 export const getTodos = () => dispatch => {
   dispatch(todosFetchPending())
   axios

@@ -2,11 +2,17 @@ const initialState = {
   items: [],
   isFetchingTodos: false,
   isErrorFetchingTodos: false,
-  submitting: {}
+  submitting: {},
+  filterBy: "ALL"
 }
 
 const todos = (state = initialState, action) => {
   switch (action.type) {
+    case "SET_TODO_FILTER":
+      return {
+        ...state,
+        filterBy: action.payload
+      }
     case "TODOS_FETCH_ERROR":
       return {
         ...state,

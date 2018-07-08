@@ -41,7 +41,10 @@ class App extends Component {
         <h1>Todos</h1>
         <TodoList />
         <br />
-        {this.props.todos.items.map(todo => JSON.stringify(todo))}
+        <h1>Filters</h1>
+        <button onClick={this.props.filterByAll}>ALL</button>
+        <button onClick={this.props.filterByActive}>Active</button>
+        <button onClick={this.props.filterByCompleted}>Completed</button>
       </div>
     )
   }
