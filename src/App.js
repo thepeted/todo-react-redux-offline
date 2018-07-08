@@ -7,13 +7,16 @@ class App extends Component {
     text: ""
   }
 
+  componentDidMount() {
+    this.props.getTodos()
+  }
+
   handleSubmit = event => {
     event.preventDefault()
     this.props.addTodo(this.state.text)
     this.setState({
       text: ""
     })
-    console.log(this.state.text)
   }
 
   handleInputChange = event => {
@@ -35,7 +38,7 @@ class App extends Component {
           <input type="submit" value="submit" />
         </form>
         <h1>Todos</h1>
-        {this.props.todos.map(todo => JSON.stringify(todo))}
+        {this.props.todos.items.map(todo => JSON.stringify(todo))}
       </div>
     )
   }

@@ -30,15 +30,16 @@ export const getTodos = () => dispatch => {
 
 export const addTodo = text => {
   const todoId = uuid()
+  const createdDate = new Date().getTime()
   return {
     type: "POST_TODO_REQUEST",
-    payload: { text, todoId },
+    payload: { text, todoId, createdDate, completed: false },
     meta: {
       offline: {
         effect: {
           url: `${API_BASE}/todos`,
           method: "POST",
-          body: JSON.stringify({ text, completed: false, todoId })
+          body: JSON.stringify({ text, completed: false, todoId, createdDate })
         },
         commit: { type: "POST_TODO_COMMIT", meta: { todoId } }
       }
