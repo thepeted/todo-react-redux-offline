@@ -28,6 +28,22 @@ export const getTodos = () => dispatch => {
     })
 }
 
+export const updateTodo = (todoId, updates) => {
+  return {
+    type: "UPDATE_TODO_REQUEST",
+    payload: { todoId, ...updates },
+    meta: {
+      offline: {
+        effect: {
+          url: `${API_BASE}/todos/${todoId}`,
+          method: "PUT",
+          body: JSON.stringify({ ...updates })
+        }
+      }
+    }
+  }
+}
+
 export const addTodo = text => {
   const todoId = uuid()
   const now = new Date()
@@ -41,8 +57,7 @@ export const addTodo = text => {
           url: `${API_BASE}/todos`,
           method: "POST",
           body: JSON.stringify({ text, completed: false, todoId, createdDate })
-        },
-        commit: { type: "POST_TODO_COMMIT", meta: { todoId } }
+        }
       }
     }
   }

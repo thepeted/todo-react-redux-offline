@@ -24,14 +24,24 @@ const todos = (state = initialState, action) => {
         items: action.payload,
         isFetchingTodos: false
       }
+    case "UPDATE_TODO_REQUEST":
+      const index = state.items.findIndex(
+        item => item.todoId === action.payload.todoId
+      )
+      if (index < 0) return state
+      return {
+        ...state,
+        items: state.items
+          .slice(0, index)
+          .concat({ ...state.items[index], ...action.payload })
+          .concat(state.items.slice(index + 1))
+      }
     case "POST_TODO_REQUEST":
       return {
         ...state,
         items: state.items.concat(action.payload)
         // submitting: { ...state.submitting, [action.payload.meta.todoId]: true }
       }
-    case "POST_TODO_COMMIT":
-    //return state.concat(action.payload.todoId)
     default:
       return state
   }
