@@ -6,7 +6,11 @@ import {
   filterByActive
 } from "../actions/todos"
 
+const mapStateToProps = ({ todos }) => ({
+  selected: todos.filterBy
+})
+
 export default connect(
-  null,
+  mapStateToProps,
   { filterByAll, filterByCompleted, filterByActive }
 )(Filters)
