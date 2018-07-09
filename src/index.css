@@ -6,7 +6,3 @@ body {
   background: #ddd;
   font-family: sans-serif;
 }
-
-button + button {
-  margin-left: 10px;
-}
