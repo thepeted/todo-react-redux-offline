@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import classnames from "classnames"
 import "./todo-card.css"
 
 class TodoCard extends React.Component {
@@ -57,12 +58,13 @@ class TodoCard extends React.Component {
   }
 
   render() {
-    const { text, completed, handleComplete, handleDelete } = this.props
+    const { text, completed, handleComplete, handleDelete, todoId } = this.props
     const { isEditing, inputText } = this.state
     return (
       <div className="TodoCard">
         <div className="TodoCard__check-area">
           <input
+            id={`${todoId}_check`}
             type="checkbox"
             disabled={isEditing}
             checked={completed}
@@ -70,6 +72,7 @@ class TodoCard extends React.Component {
               handleComplete(!completed)
             }}
           />
+          <label for={`${todoId}_check`} />
         </div>
         <div className="TodoCard__content-area">
           {isEditing ? (
@@ -82,11 +85,16 @@ class TodoCard extends React.Component {
               />
             </form>
           ) : (
-            <div onDoubleClick={this.handleTextDoubleClick}>{text}</div>
+            <div
+              className={classnames("TodoCard__text", { completed })}
+              onDoubleClick={this.handleTextDoubleClick}
+            >
+              {text}
+            </div>
           )}
         </div>
         <div className="TodoCard__close-area">
-          <div onClick={handleDelete}>X</div>
+          <div className="TodoCard__delete" onClick={handleDelete} />
         </div>
       </div>
     )
@@ -96,6 +104,7 @@ class TodoCard extends React.Component {
 TodoCard.propTypes = {
   text: PropTypes.string.isRequired,
   completed: PropTypes.bool.isRequired,
+  todoId: PropTypes.string.isRequired,
   handleComplete: PropTypes.func.isRequired,
   handleDelete: PropTypes.func.isRequired,
   handleUpdateText: PropTypes.func.isRequired

@@ -1,13 +1,16 @@
 .TodoCard {
   display: flex;
   width: 100%;
-  padding: 15px;
+  padding: 20px;
 
   background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .TodoCard__check-area {
-  width: 80px;
+  display: flex;
+  align-items: center;
+  width: 40px;
 }
 
 .TodoCard__content-area {
@@ -16,4 +19,63 @@
 
 .TodoCard__close-area {
   width: 40px;
+}
+
+.TodoCard:hover .TodoCard__delete::after {
+  display: block;
+}
+
+.TodoCard__delete {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.TodoCard__delete::after {
+  display: none;
+  font-size: 1.3rem;
+  color: red;
+  content: "×";
+  cursor: pointer;
+
+  /* shame */
+  margin-top: -2px;
+}
+
+.TodoCard__text {
+  padding: 3px;
+}
+
+.TodoCard__text.completed {
+  text-decoration: line-through;
+}
+
+.TodoCard input[type="text"] {
+  width: 100%;
+  border: 1px solid black;
+  padding: 2px;
+}
+
+.TodoCard input[type="checkbox"]:disabled {
+  cursor: not-allowed;
+}
+
+.TodoCard input[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+
+label::before {
+  display: inline-block;
+  content: "";
+  height: 1em;
+  width: 1em;
+  border: 1px solid #ddd;
+  vertical-align: bottom;
+}
+
+input:checked + label::before {
+  content: "\2714";
+  padding-left: 2px;
+  color: green;
 }
