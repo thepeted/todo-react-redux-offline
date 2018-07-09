@@ -6,3 +6,7 @@ body {
   background: #ddd;
   font-family: sans-serif;
 }
+
+input:focus {
+  outline: 0;
+}

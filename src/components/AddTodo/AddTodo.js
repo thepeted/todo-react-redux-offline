@@ -3,8 +3,17 @@ import PropTypes from "prop-types"
 import "./AddTodo.css"
 
 class AddTodo extends React.Component {
-  state = {
-    text: ""
+  constructor(props) {
+    super(props)
+    this.state = {
+      text: ""
+    }
+
+    this.textInput = React.createRef()
+  }
+
+  componentDidMount() {
+    this.textInput.current.focus()
   }
 
   handleSubmit = event => {
@@ -23,8 +32,10 @@ class AddTodo extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className="AddTodo" onSubmit={this.handleSubmit}>
         <input
+          ref={this.textInput}
+          placeholder="Enter something that needs doing here..."
           type="text"
           value={this.state.text}
           onChange={this.handleInputChange}
