@@ -9,7 +9,7 @@ import reducer from "./reducers"
 
 import "./normalize.css"
 import "./index.css"
-import App from "./App"
+import App from "./containers/AppContainer"
 
 // import registerServiceWorker from './registerServiceWorker';
 
