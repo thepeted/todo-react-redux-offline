@@ -29,7 +29,6 @@ class AddTodo extends React.Component {
           value={this.state.text}
           onChange={this.handleInputChange}
         />
-        <input type="submit" value="submit" />
       </form>
     )
   }

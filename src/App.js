@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import "./App.css"
 
 import AddTodo from "./containers/AddTodoContainer"
 import TodoList from "./containers/TodoListContainer"
@@ -12,13 +13,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Add Todo</h1>
-        <AddTodo />
-        <h1>Todos</h1>
+        <h1>To-Dootrix</h1>
+        <div className="App__add-todo">
+          <AddTodo />
+        </div>
         <TodoList />
-        <br />
-        <h1>Filters</h1>
-        <Filters />
+        <footer>
+          <Filters />
+        </footer>
       </div>
     )
   }

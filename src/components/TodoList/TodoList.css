@@ -1,9 +1,17 @@
+.TodoList {
+  margin: 30px auto;
+  max-width: 600px;
+}
+
 .TodoList ul {
-  list-style: none;
   padding: 0;
-  margin: 0;
+  list-style: none;
 }
 
 .TodoList ul li {
   margin-bottom: 12px;
+}
+
+.TodoList__placeholder {
+  text-align: center;
 }

@@ -1,0 +1,31 @@
+.App {
+  margin: 50px;
+}
+
+.App h1,
+.App__add-todo {
+  display: flex;
+  justify-content: center;
+}
+
+.App h1 {
+  text-transform: uppercase;
+}
+
+.App footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 80px;
+  width: 100%;
+  background: #999;
+}
+
+@media (max-width: 500px) {
+  .App {
+    margin: 50px 0;
+  }
+}

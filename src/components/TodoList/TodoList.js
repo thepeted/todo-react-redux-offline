@@ -5,7 +5,9 @@ import "./TodoList.css"
 
 const TodoList = ({ todos, updateTodo, deleteTodo }) => (
   <div className="TodoList">
-    {todos.length < 1 && <div>There is nothing here :-(</div>}
+    {todos.length < 1 && (
+      <div className="TodoList__placeholder">There is nothing here :-(</div>
+    )}
     {todos.length > 0 && (
       <ul>
         {todos.map(todo => (
