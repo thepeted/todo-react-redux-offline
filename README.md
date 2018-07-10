@@ -15,10 +15,14 @@ The project supports the [Redux Dev Tools extension](https://github.com/zalmoxis
 
 ## Run locally
 
+Prerequisite: Recent Node.js environment
+
 1.  Export the base URI of the [backend todos API](https://github.com/thepeted/serverless-todo) service to an environment variable named `REACT_APP_API_BASE`
 2.  `npm start` or `yarn start`
 
 ## Build
+
+Prerequisite: Recent Node.js environment
 
 1.  export the base URI of the [backend todos API](https://github.com/thepeted/serverless-todo) service to an environment variable named `REACT_APP_API_BASE`
 2.  `npm run build` or `yarn build`
