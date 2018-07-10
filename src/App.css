@@ -24,6 +24,11 @@
   background: #999;
 }
 
+.App .Status {
+  position: absolute;
+  right: 20px;
+}
+
 @media (max-width: 500px) {
   .App {
     margin: 50px 0;

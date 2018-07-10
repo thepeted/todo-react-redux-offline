@@ -4,6 +4,7 @@ import "./App.css"
 import AddTodo from "./containers/AddTodoContainer"
 import TodoList from "./containers/TodoListContainer"
 import Filters from "./containers/FiltersContainer"
+import Status from "./containers/StatusContainer"
 
 class App extends Component {
   componentDidMount() {
@@ -20,6 +21,7 @@ class App extends Component {
         <TodoList />
         <footer>
           <Filters />
+          <Status />
         </footer>
       </div>
     )

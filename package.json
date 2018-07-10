@@ -5,6 +5,7 @@
   "dependencies": {
     "@redux-offline/redux-offline": "^2.4.0",
     "axios": "^0.18.0",
+    "better-react-spinkit": "^2.0.4",
     "classnames": "^2.2.6",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
