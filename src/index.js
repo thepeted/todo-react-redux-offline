@@ -11,7 +11,7 @@ import "./normalize.css"
 import "./index.css"
 import App from "./containers/AppContainer"
 
-// import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from "./registerServiceWorker"
 
 const render = () =>
   ReactDOM.render(
@@ -30,4 +30,4 @@ const store = createStore(
   composeEnhancers(applyMiddleware(thunk), offline(offlineConfig))
 )
 
-// registerServiceWorker();
+registerServiceWorker()
