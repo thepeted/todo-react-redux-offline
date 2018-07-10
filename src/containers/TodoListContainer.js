@@ -14,7 +14,8 @@ const mapStateToProps = ({ todos }) => {
   }
 
   return {
-    todos: todoItems.slice(0).sort((a, b) => b.createdDate - a.createdDate)
+    todos: todoItems.slice(0).sort((a, b) => b.createdDate - a.createdDate),
+    isFetchingTodos: todos.isFetchingTodos
   }
 }
 

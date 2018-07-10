@@ -3,11 +3,12 @@ import PropTypes from "prop-types"
 import TodoCard from "../TodoCard/TodoCard"
 import "./TodoList.css"
 
-const TodoList = ({ todos, updateTodo, deleteTodo }) => (
+const TodoList = ({ todos, updateTodo, deleteTodo, isFetchingTodos }) => (
   <div className="TodoList">
-    {todos.length < 1 && (
-      <div className="TodoList__placeholder">There is nothing here :-(</div>
-    )}
+    {!isFetchingTodos &&
+      (todos.length < 1 && (
+        <div className="TodoList__placeholder">There is nothing here :-(</div>
+      ))}
     {todos.length > 0 && (
       <ul>
         {todos.map(todo => (
@@ -30,7 +31,8 @@ const TodoList = ({ todos, updateTodo, deleteTodo }) => (
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(PropTypes.object).isRequired,
   updateTodo: PropTypes.func.isRequired,
-  deleteTodo: PropTypes.func.isRequired
+  deleteTodo: PropTypes.func.isRequired,
+  isFetchingTodos: PropTypes.func.isRequired
 }
 
 export default TodoList
