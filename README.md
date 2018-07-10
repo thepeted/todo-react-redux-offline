@@ -1,5 +1,9 @@
 # todo-react-redux-offline
 
+## Description
+
+Todo app with offline support and 'optimistic updates'.
+
 ## Redux Dev Tools
 
 The project supports the [Redux Dev Tools extension](https://github.com/zalmoxisus/redux-devtools-extension)
