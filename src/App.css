@@ -6,6 +6,7 @@
 .App__add-todo {
   display: flex;
   justify-content: center;
+  color: #424f65;
 }
 
 .App h1 {
@@ -21,7 +22,7 @@
   bottom: 0px;
   height: 80px;
   width: 100%;
-  background: #999;
+  border-top: 1px solid #dcdcdc;
 }
 
 .App .Status {

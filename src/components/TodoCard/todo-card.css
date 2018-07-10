@@ -52,7 +52,7 @@
 
 .TodoCard input[type="text"] {
   width: 100%;
-  border: 1px solid black;
+  border: 1px solid #aaa;
   padding: 2px;
 }
 
@@ -77,5 +77,5 @@ label::before {
 input:checked + label::before {
   content: "\2714";
   padding-left: 2px;
-  color: green;
+  color: #84b209;
 }

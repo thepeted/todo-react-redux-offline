@@ -18,6 +18,14 @@ input:focus {
 }
 
 body {
-  background: #ddd;
+  background: #f0f0f0;
   font-family: sans-serif;
+  color: #424242;
+}
+
+* {
+  font-family: "Work Sans", sans-serif;
+}
+h1 {
+  font-family: "Montserrat", sans-serif;
 }

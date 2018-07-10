@@ -6,7 +6,7 @@ import "./Status.css"
 const Status = ({ isFetching, online }) => (
   <div className="Status">
     {online ? (
-      isFetching && <CubeGrid />
+      isFetching && <CubeGrid color="#424f65" />
     ) : (
       <span className="Status__offline">OFFLINE</span>
     )}

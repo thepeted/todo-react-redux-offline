@@ -35,7 +35,7 @@ class AddTodo extends React.Component {
       <form className="AddTodo" onSubmit={this.handleSubmit}>
         <input
           ref={this.textInput}
-          placeholder="Enter something that needs doing here..."
+          placeholder="Enter something todo here..."
           type="text"
           value={this.state.text}
           onChange={this.handleInputChange}
