@@ -13,3 +13,9 @@
 .AddTodo input[type="text"]::placeholder {
   color: #aaa;
 }
+
+@media (max-width: 600px) {
+  .AddTodo input[type="text"] {
+    width: 400px;
+  }
+}

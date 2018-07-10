@@ -72,7 +72,7 @@ class TodoCard extends React.Component {
               handleComplete(!completed)
             }}
           />
-          <label for={`${todoId}_check`} />
+          <label htmlFor={`${todoId}_check`} />
         </div>
         <div className="TodoCard__content-area">
           {isEditing ? (
