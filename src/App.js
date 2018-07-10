@@ -13,12 +13,14 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>To-Dootrix</h1>
-        <div className="App__add-todo">
-          <AddTodo />
+      <div className="Wrapper">
+        <div className="App">
+          <h1>To-Dootrix</h1>
+          <div className="App__add-todo">
+            <AddTodo />
+          </div>
+          <TodoList />
         </div>
-        <TodoList />
         <footer>
           <Filters />
           <Status />
