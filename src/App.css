@@ -20,6 +20,27 @@
   text-transform: uppercase;
 }
 
+.info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.info a,
+.info a:visited,
+.info a:active {
+  color: #424f65;
+}
+
+.info a:first-of-type {
+  margin-right: 5px;
+}
+
+.info a:last-of-type {
+  margin-left: 5px;
+}
+
 footer {
   display: flex;
   align-items: center;

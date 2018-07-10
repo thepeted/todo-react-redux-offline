@@ -21,10 +21,21 @@ class App extends Component {
           </div>
           <TodoList />
         </div>
-        <footer>
-          <Filters />
-          <Status />
-        </footer>
+        <div>
+          <div className="info">
+            <a href="https://github.com/thepeted/todo-react-redux-offline">
+              Client side source
+            </a>{" "}
+            |
+            <a href="https://github.com/thepeted/serverless-todo">
+              Server side source
+            </a>
+          </div>
+          <footer>
+            <Filters />
+            <Status />
+          </footer>
+        </div>
       </div>
     )
   }
